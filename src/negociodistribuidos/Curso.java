@@ -10,5 +10,47 @@ package negociodistribuidos;
  * @author ceccy
  */
 public class Curso {
-    
+
+    private String nombre;
+    private Maestro maestro;
+    private int id;
+
+    public Curso() {
+    }
+
+    public Curso(String nombre, Maestro maestro, int id) {
+        this.nombre = nombre;
+        this.maestro = maestro;
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Maestro getMaestro() {
+        return maestro;
+    }
+
+    public void setMaestro(Maestro maestro) {
+        this.maestro = maestro;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Curso{" + "nombre=" + nombre + ", maestro=" + maestro + ", id=" + id + '}';
+    }
+
 }
