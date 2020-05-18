@@ -5,6 +5,8 @@
  */
 package negociodistribuidos;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ceccy
@@ -14,14 +16,24 @@ public class Curso {
     private String nombre;
     private Maestro maestro;
     private int id;
+    private ArrayList<Alumno> alumnos;
 
     public Curso() {
     }
 
-    public Curso(String nombre, Maestro maestro, int id) {
+    public Curso(String nombre, Maestro maestro, int id, ArrayList<Alumno> alumnos) {
         this.nombre = nombre;
         this.maestro = maestro;
         this.id = id;
+        this.alumnos = alumnos;
+    }
+
+    public ArrayList<Alumno> getAlumnos() {
+        return alumnos;
+    }
+
+    public void setAlumnos(ArrayList<Alumno> alumnos) {
+        this.alumnos = alumnos;
     }
 
     public String getNombre() {

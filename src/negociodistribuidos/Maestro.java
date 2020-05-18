@@ -12,15 +12,15 @@ package negociodistribuidos;
 public class Maestro extends Usuario {
 
     private String nombre;
-    private Usuario contrasenia, usuario;
 
     public Maestro() {
     }
 
-    public Maestro(String nombre, String usuario, String contrasenia) {
-        super(usuario, contrasenia);
+    public Maestro(String nombre, String usuario, String contrasenia, int id) {
+        super(usuario, contrasenia, id);
         this.nombre = nombre;
     }
+
 
     public String getNombre() {
         return nombre;
@@ -30,17 +30,28 @@ public class Maestro extends Usuario {
         this.nombre = nombre;
     }
 
-    public void setContrasenia(Usuario contrasenia) {
-        this.contrasenia = contrasenia;
+    public String getUsuario() {
+        return usuario;
     }
 
-    public void setUsuario(Usuario usuario) {
+    public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
 
-    @Override
-    public String toString() {
-        return "Maestro{" + "nombre=" + nombre + ", contrasenia=" + contrasenia + ", usuario=" + usuario + '}';
+    public String getContrasenia() {
+        return contrasenia;
+    }
+
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
 }

@@ -5,23 +5,60 @@
  */
 package negociodistribuidos;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ceccy
  */
-public class Alumno extends Usuario{
-    
-    private String nombre, apellidoM, apellidoP;
-    Usuario usuario, contrasenia;
+public class Alumno {
+
+    private String nombre;
+    private ArrayList<Asignacion> asignaciones, trabajos;
+    private ArrayList<Calificacion> calificaciones;
+    private int id;
 
     public Alumno() {
     }
 
-    public Alumno(String nombre, String apellidoM, String apellidoP, String usuario, String contrasenia) {
-        super(usuario, contrasenia);
+    public Alumno(String nombre, ArrayList<Asignacion> asignaciones, ArrayList<Asignacion> trabajos, ArrayList<Calificacion> calificaciones, int id) {
         this.nombre = nombre;
-        this.apellidoM = apellidoM;
-        this.apellidoP = apellidoP;
+        this.asignaciones = asignaciones;
+        this.trabajos = trabajos;
+        this.calificaciones = calificaciones;
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public ArrayList<Asignacion> getAsignaciones() {
+        return asignaciones;
+    }
+
+    public void setAsignaciones(ArrayList<Asignacion> asignaciones) {
+        this.asignaciones = asignaciones;
+    }
+
+    public ArrayList<Asignacion> getTrabajos() {
+        return trabajos;
+    }
+
+    public void setTrabajos(ArrayList<Asignacion> trabajos) {
+        this.trabajos = trabajos;
+    }
+
+    public ArrayList<Calificacion> getCalificaciones() {
+        return calificaciones;
+    }
+
+    public void setCalificaciones(ArrayList<Calificacion> calificaciones) {
+        this.calificaciones = calificaciones;
     }
 
     public String getNombre() {
@@ -31,40 +68,4 @@ public class Alumno extends Usuario{
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
-    public String getApellidoM() {
-        return apellidoM;
-    }
-
-    public void setApellidoM(String apellidoM) {
-        this.apellidoM = apellidoM;
-    }
-
-    public String getApellidoP() {
-        return apellidoP;
-    }
-
-    public void setApellidoP(String apellidoP) {
-        this.apellidoP = apellidoP;
-    }
-
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-
-    public void setContrasenia(Usuario contrasenia) {
-        this.contrasenia = contrasenia;
-    }
-
-    @Override
-    public String toString() {
-        return "Alumno{" + "nombre=" + nombre + ", apellidoM=" + apellidoM + ", apellidoP=" + apellidoP + ", usuario=" + usuario + ", contrasenia=" + contrasenia + '}';
-    }
-
-
-    
-    
-    
 }

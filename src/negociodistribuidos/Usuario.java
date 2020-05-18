@@ -10,15 +10,17 @@ package negociodistribuidos;
  * @author ceccy
  */
 public class Usuario {
-    private String usuario, contrasenia;
+    protected String usuario, contrasenia;
+    protected int id;
     
     public Usuario(){
         
     }
 
-    public Usuario(String usuario, String contrasenia) {
+    public Usuario(String usuario, String contrasenia, int id) {
         this.usuario = usuario;
         this.contrasenia = contrasenia;
+        this.id=id;
     }
 
     public String getUsuario() {
@@ -37,10 +39,20 @@ public class Usuario {
         this.contrasenia = contrasenia;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
-        return "Usuario{" + "usuario=" + usuario + ", contrasenia=" + contrasenia + '}';
+        return "Usuario{" + "usuario=" + usuario + ", contrasenia=" + contrasenia + ", id=" + id + '}';
     }
+
+    
     
     
 }
