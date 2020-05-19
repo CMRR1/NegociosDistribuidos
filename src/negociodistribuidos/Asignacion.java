@@ -14,6 +14,7 @@ public class Asignacion {
     private String nombre;
     private int calificacion, id;
     private boolean estado, tipo;
+    
 
     public Asignacion() {
     }

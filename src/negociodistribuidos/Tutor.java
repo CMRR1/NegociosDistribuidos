@@ -5,18 +5,20 @@
  */
 package negociodistribuidos;
 
+import java.io.Serializable;
+
 /**
  *
  * @author ceccy
  */
-public class Tutor extends Usuario {
+public class Tutor extends Usuario implements Serializable{
     private String nombre;
-    private Alumno alumno;
+    private int alumno;
 
     public Tutor() {
     }
 
-    public Tutor(String nombre, String usuario, String contrasenia,int id ,Alumno alumno) {
+    public Tutor(String nombre, String usuario, String contrasenia,int id ,int alumno) {
         super(usuario, contrasenia,id);
         this.nombre = nombre;
         this.alumno=alumno;
@@ -30,37 +32,45 @@ public class Tutor extends Usuario {
         this.nombre = nombre;
     }
 
-    public Alumno getAlumno() {
+    public int getAlumno() {
         return alumno;
     }
 
-    public void setAlumno(Alumno alumno) {
+    public void setAlumno(int alumno) {
         this.alumno = alumno;
     }
 
+    @Override
     public String getUsuario() {
         return usuario;
     }
 
+    @Override
     public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
 
+    @Override
     public String getContrasenia() {
         return contrasenia;
     }
 
+    @Override
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
     }
-
-
 
     @Override
     public int getId() {
         return id;
     }
 
+    @Override
+    public String toString() {
+        return "Tutor{" + "nombre=" + nombre + ", alumno=" + alumno + '}';
+    }
+
+    @Override
     public void setId(int id) {
         this.id = id;
     }

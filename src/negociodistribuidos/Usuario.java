@@ -5,11 +5,13 @@
  */
 package negociodistribuidos;
 
+import java.io.Serializable;
+
 /**
  *
  * @author ceccy
  */
-public class Usuario {
+public class Usuario implements Serializable{
     protected String usuario, contrasenia;
     protected int id;
     

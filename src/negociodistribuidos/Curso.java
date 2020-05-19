@@ -17,6 +17,7 @@ public class Curso {
     private Maestro maestro;
     private int id;
     private ArrayList<Alumno> alumnos;
+    private ArrayList<Asignacion> asignaciones;
 
     public Curso() {
     }

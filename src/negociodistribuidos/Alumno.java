@@ -5,13 +5,14 @@
  */
 package negociodistribuidos;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author ceccy
  */
-public class Alumno {
+public class Alumno implements Serializable{
 
     private String nombre;
     private ArrayList<Asignacion> asignaciones, trabajos;
@@ -63,6 +64,11 @@ public class Alumno {
 
     public String getNombre() {
         return nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "Alumno{" + "nombre=" + nombre + ", asignaciones=" + asignaciones + ", trabajos=" + trabajos + ", calificaciones=" + calificaciones + ", id=" + id + '}';
     }
 
     public void setNombre(String nombre) {
