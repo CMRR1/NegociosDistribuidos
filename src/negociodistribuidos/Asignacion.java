@@ -5,26 +5,46 @@
  */
 package negociodistribuidos;
 
+import java.io.Serializable;
+
 /**
  *
  * @author ceccy
  */
-public class Asignacion {
+public class Asignacion implements Serializable{
 
-    private String nombre;
+    private String nombre,curso,notas;
+
+    public String getCurso() {
+        return curso;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
     private int calificacion, id;
     private boolean estado, tipo;
     
 
-    public Asignacion() {
+    public Asignacion()  {
     }
 
-    public Asignacion(String nombre, int calificacion, int id, boolean estado, boolean tipo) {
+    public Asignacion(String nombre, int calificacion, int id, boolean estado, boolean tipo,String curso,String notas) {
         this.nombre = nombre;
         this.calificacion = calificacion;
         this.id = id;
         this.estado = estado;
         this.tipo = tipo;
+        this.curso = curso;
+        this.notas = notas;
+    }
+
+    public String getNotas() {
+        return notas;
+    }
+
+    public void setNotas(String notas) {
+        this.notas = notas;
     }
 
     public int getId() {
