@@ -5,11 +5,14 @@
  */
 package negociodistribuidos;
 
+import java.io.Serializable;
+
 /**
  *
  * @author ceccy
  */
-public class Calificacion {
+public class Calificacion implements Serializable
+{
 
     private int num, id, tareas;
     private String curso;
